@@ -1,9 +1,9 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Pawn extends Piece
+public class Rook extends Piece
 {
-    Pawn(byte row, byte col, byte teamNo,String pieceName)
+    Rook(byte row, byte col, byte teamNo,String pieceName)
     {
         super(row,col,teamNo,pieceName);
     }
