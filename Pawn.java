@@ -1,3 +1,4 @@
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,13 +9,19 @@ public class Pawn extends Piece
         super(row,col,teamNo,pieceName);
     }
     @Override
-    public List<Byte[]> getMoves()
+    public List<Integer[]> getMoves()
     {
-        List<Byte[]> moves = new ArrayList<>();
+        List<Integer[]> moves = new ArrayList<>();
+        if(teamNo==0) {
+            moves.add(new Integer[]{(int)row,col + 1});
+            //if()
+        }
+        else
+            moves.add(new Integer[]{row,col-1});
         return moves;
     }
     @Override
-    public void move(List<Byte[]> moves)
+    public void move(List<Integer[]> moves)
     {
         byte moveRow=Input.getByte();
         byte moveCol=Input.getByte();
